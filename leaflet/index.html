@@ -90,8 +90,8 @@
 
 <script>
 (function () {
+  var BUILD = '202609031557';   // 이미지 캐시 무효화용. 빌드마다 갱신
   var VERS = [
-    ['v1', 'v1 첫 시안 (HTML 재구축)'],
     ['v2', 'v2 원본 사진'],
     ['v3', 'v3 실사진 A'],
     ['v3b', 'v3 실사진 B']
@@ -108,7 +108,7 @@
 
   var imgs = [].slice.call(document.querySelectorAll('img[data-k]'));
   function load(key) {
-    imgs.forEach(function (im) { im.src = 'fold/' + key + '/' + im.getAttribute('data-k') + '.jpg'; });
+    imgs.forEach(function (im) { im.src = 'fold/' + key + '/' + im.getAttribute('data-k') + '.jpg?b=' + BUILD; });
   }
   sel.addEventListener('change', function () { load(sel.value); });
 
