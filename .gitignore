@@ -1,3 +1,6 @@
 _build/
 _assets/
+리플렛/
+배너/
 *.pdf
+*.zip

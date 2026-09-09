@@ -1,16 +1,31 @@
-# GUNWI SUSEO GOLF & RESORT
+# 군위수서골프앤리조트 주중 이용권 결과물
 
-군위수서 골프앤리조트 주중이용권 안내 자료.
+GitHub: culeisure/gunwisuseogolfnresort (public, noindex). GitHub Pages는 `docs/` 폴더를 서비스합니다.
 
-- 리플렛 접지 미리보기: `/leaflet/`
+## 폴더
 
-전 페이지 noindex 적용. 인쇄용 PDF와 빌드 소스는 저장소에 포함하지 않는다.
+- `docs/` 웹사이트 (GitHub Pages 루트)
+  - `ryu/`, `lee/` 주중 이용권 랜딩 (류성현 이사 / 이승재 팀장). 원본은 `_landing/template.html`, 생성은 `python docs/_landing/build.py`
+  - `img/`, `landing.css`, `landing.js` 랜딩 공용 자산
+  - `leaflet/` 리플렛 접지 시뮬레이터 (`fold/v7_ryu`, `fold/v7_lee`)
+  - `index.html` 루트 진입 시 `leaflet/`로 이동
+- `리플렛/` 3단접지 리플렛 (성원애드피아 규격 301x214, 도련 2mm)
+  - `류성현_리플렛/`, `이승재_리플렛/` 인쇄소 입고용 최종 3파일 (글자 아웃라인 완료)
+  - `군위수서_리플렛_아웃라인.zip` 위 두 세트 묶음
+  - `작업버전/` v2~v7 작업 PDF, v7 4파일 세트, `폐기/`(v1 · v3 · v5 · v6 단일본, v8 세트)
+- `배너/` X배너 600x1800
+  - `군위수서CC_X배너_600x1800_시안.pdf`, `_시안.png` 확정 시안 (Codex 제작, 시안08)
+  - `작업버전/claude_v1-v5/`, `작업버전/codex_시안02-07/`
+- `_assets/` 로고 SVG · 지도 · 사진 원본, `leaflet_photos/` 리플렛·랜딩용 사진 원본
+- `_build/` 제작 스크립트 (리플렛 `build_v2.py` → `outline_pack.py`, 시뮬레이터 `slice_fold.py`, X배너 `build_xbanner*.py`)
 
-## 주중 이용권 랜딩 (SMS 발송용, 2026-09-09)
+## 링크
 
-- 류성현 이사: https://culeisure.github.io/gunwisuseogolfnresort/ryu/
-- 이승재 팀장: https://culeisure.github.io/gunwisuseogolfnresort/lee/
-- 템플릿 `_landing/template.html`, 빌드 `python _landing/build.py` (루트에서) -> `ryu/`, `lee/` 생성
-- 공용 `landing.css`, `landing.js`, 사진 `img/` (leaflet asset 원본을 webp로 최적화)
-- 상품 내용은 `260827_주중이용권` C덱 안내문 기준 (주중 개인 2,150 / 가족 3,300 / 무기명 8,800)
-- 검색엔진 차단(noindex + robots.txt). 접지 시뮬레이터 `/leaflet/`는 그대로 유지
+- 랜딩 류성현 https://culeisure.github.io/gunwisuseogolfnresort/ryu/
+- 랜딩 이승재 https://culeisure.github.io/gunwisuseogolfnresort/lee/
+- 접지 시뮬레이터 https://culeisure.github.io/gunwisuseogolfnresort/leaflet/
+
+## 규칙
+
+- 텍스트 작업은 `claude/<작업>`, `codex/<작업>` 브랜치 워크트리(`../_wt/`)에서 하고 main 병합은 Claude가 한다.
+- PDF · 이미지 결과물은 git에 넣지 않는다 (`.gitignore`).
