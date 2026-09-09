@@ -101,4 +101,71 @@
       });
     });
   })();
+
+  /* 6) 사진 확대 모달: 갤러리 · 타일 · 풀폭 사진 */
+  (function () {
+    var imgs = Array.prototype.slice.call(document.querySelectorAll(".gal img, .tile img, .full img"));
+    if (!imgs.length) return;
+    var lb = document.createElement("div");
+    lb.className = "lightbox";
+    lb.setAttribute("role", "dialog");
+    lb.setAttribute("aria-label", "사진 크게 보기");
+    lb.innerHTML = '<span class="lightbox__cnt"></span><span class="lightbox__x" aria-label="닫기">&times;</span>' +
+      '<span class="lightbox__nav lightbox__prev" aria-label="이전">&#8249;</span>' +
+      '<img class="lightbox__img" alt="" />' +
+      '<span class="lightbox__nav lightbox__next" aria-label="다음">&#8250;</span>' +
+      '<div class="lightbox__cap"></div>';
+    document.body.appendChild(lb);
+    var big = lb.querySelector(".lightbox__img");
+    var cap = lb.querySelector(".lightbox__cap");
+    var cnt = lb.querySelector(".lightbox__cnt");
+    var idx = 0;
+
+    function caption(img) {
+      var fc = img.parentNode && img.parentNode.querySelector("figcaption");
+      if (fc) {
+        var b = fc.querySelector("b");
+        return b ? b.textContent.replace(/\s+/g, " ").trim() : fc.textContent.replace(/\s+/g, " ").trim();
+      }
+      return img.alt || "";
+    }
+    function show(i) {
+      idx = (i + imgs.length) % imgs.length;
+      big.src = imgs[idx].currentSrc || imgs[idx].src;
+      big.alt = imgs[idx].alt || "";
+      cap.textContent = caption(imgs[idx]);
+      cnt.textContent = (idx + 1) + " / " + imgs.length;
+    }
+    function open(i) {
+      show(i);
+      lb.classList.add("is-on");
+      document.documentElement.style.overflow = "hidden";
+    }
+    function close() {
+      lb.classList.remove("is-on");
+      document.documentElement.style.overflow = "";
+    }
+    imgs.forEach(function (img, i) {
+      var target = img.closest("figure") || img;
+      target.classList.add("zoomable");
+      target.addEventListener("click", function () { open(i); });
+    });
+    lb.querySelector(".lightbox__x").addEventListener("click", close);
+    lb.querySelector(".lightbox__prev").addEventListener("click", function (e) { e.stopPropagation(); show(idx - 1); });
+    lb.querySelector(".lightbox__next").addEventListener("click", function (e) { e.stopPropagation(); show(idx + 1); });
+    lb.addEventListener("click", function (e) { if (e.target === lb || e.target === big) close(); });
+    document.addEventListener("keydown", function (e) {
+      if (!lb.classList.contains("is-on")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(idx - 1);
+      if (e.key === "ArrowRight") show(idx + 1);
+    });
+    var x0 = null;
+    lb.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+  })();
 })();

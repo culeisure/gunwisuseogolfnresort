@@ -653,3 +653,46 @@ ul { list-style: none; }
 .tiles--stack { grid-template-columns: 1fr; }
 .tiles--stack .tile img { aspect-ratio: 4 / 2.6; }
 .tiles--stack .tile p { display: block; }
+
+/* ---------- 사진 확대 모달 ---------- */
+.zoomable { cursor: zoom-in; }
+.lightbox {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(8, 20, 16, 0.92);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  touch-action: pan-y;
+}
+.lightbox.is-on { opacity: 1; visibility: visible; }
+.lightbox__img {
+  max-width: 96vw; max-height: 82vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(0.96);
+  transition: transform 0.25s ease;
+}
+.lightbox.is-on .lightbox__img { transform: scale(1); }
+.lightbox__cap {
+  position: absolute; left: 0; right: 0; bottom: calc(22px + env(safe-area-inset-bottom));
+  text-align: center;
+  font-size: 13px; color: rgba(248, 245, 238, 0.9);
+  padding: 0 60px;
+}
+.lightbox__x, .lightbox__nav {
+  position: absolute;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff; font-size: 22px; line-height: 42px; text-align: center;
+  cursor: pointer; user-select: none;
+}
+.lightbox__x { top: calc(16px + env(safe-area-inset-top)); right: 16px; }
+.lightbox__nav { top: 50%; transform: translateY(-50%); }
+.lightbox__prev { left: 10px; }
+.lightbox__next { right: 10px; }
+.lightbox__cnt {
+  position: absolute; top: calc(28px + env(safe-area-inset-top)); left: 20px;
+  font-size: 12px; letter-spacing: 0.1em; color: rgba(248, 245, 238, 0.75);
+}
