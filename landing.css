@@ -637,3 +637,19 @@ ul { list-style: none; }
 .tile p { margin-top: 6px; font-size: 12px; line-height: 1.55; color: rgba(248, 245, 238, 0.85); }
 .tile:not(.tile--tall) p { display: none; }
 @media (min-width: 480px) { .tile:not(.tile--tall) p { display: block; } }
+
+/* ---------- 두 숫자 ---------- */
+.facts--two { grid-template-columns: 1fr 1fr; }
+.facts--two .fact { padding: 18px 10px 16px; }
+.facts--two .fact small { display: block; font-size: 11.5px; font-weight: 600; color: var(--gold); margin-bottom: 8px; letter-spacing: 0.02em; }
+.facts--two .fact b { font-size: 44px; }
+.facts--two .fact b em { font-style: normal; font-size: 17px; font-weight: 600; color: var(--gold); margin-left: 2px; }
+.facts--two .fact span { font-size: 11.5px; }
+.mini { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); overflow: hidden; }
+.mini li { padding: 12px 6px; text-align: center; }
+.mini li + li { border-left: 1px solid var(--line); }
+.mini b { display: block; font-size: 13.5px; font-weight: 700; color: var(--green); }
+.mini span { display: block; font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+.tiles--stack { grid-template-columns: 1fr; }
+.tiles--stack .tile img { aspect-ratio: 4 / 2.6; }
+.tiles--stack .tile p { display: block; }
