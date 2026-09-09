@@ -774,3 +774,13 @@ ul { list-style: none; }
 .cmp-wrap { position: relative; }
 .cmp-wrap::after { content: ""; position: absolute; top: 0; right: 0; bottom: 10px; width: 36px; pointer-events: none; background: linear-gradient(90deg, rgba(245, 242, 234, 0), var(--cream)); }
 @media (min-width: 560px) { .cmp-wrap::after { display: none; } }
+
+/* v4.1: 히어로 압축 (사진이 보이도록) */
+.lock__body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+.lock__eyebrow { margin-bottom: 8px; }
+.lock__lead { margin-bottom: 0; font-size: 15px; }
+.lock__title { font-size: clamp(30px, 8.6vw, 40px); line-height: 1.25; }
+.lock__sub { margin-top: 10px; margin-bottom: 0; font-size: 14px; }
+.lock__sub--key { font-weight: 700; color: #fff; margin-top: 14px; }
+.lock__cta { margin-top: 16px; }
+.lock__cta .btn { padding: 12px 10px; font-size: 14px; }
