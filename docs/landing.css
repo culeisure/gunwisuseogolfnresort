@@ -778,7 +778,7 @@ ul { list-style: none; }
 /* v4.1: 히어로 압축 (사진이 보이도록) */
 .lock__body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
 .lock__eyebrow { margin-bottom: 8px; }
-.lock__lead { margin-bottom: 0; font-size: 15px; }
+.lock__lead { margin-bottom: 2px; font-family: var(--serif); font-size: clamp(20px, 5.6vw, 26px); font-weight: 600; letter-spacing: 0.02em; color: var(--gold-3); }
 .lock__title { font-size: clamp(30px, 8.6vw, 40px); line-height: 1.25; }
 .lock__sub { margin-top: 10px; margin-bottom: 0; font-size: 14px; }
 .lock__sub--key { font-weight: 700; color: #fff; margin-top: 14px; }
