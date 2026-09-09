@@ -104,7 +104,7 @@
 
   /* 6) 사진 확대 모달: 갤러리 · 타일 · 풀폭 사진 */
   (function () {
-    var imgs = Array.prototype.slice.call(document.querySelectorAll(".gal img, .tile img, .full img"));
+    var imgs = Array.prototype.slice.call(document.querySelectorAll(".photo img, .gal img, .tile img, .full img"));
     if (!imgs.length) return;
     var lb = document.createElement("div");
     lb.className = "lightbox";

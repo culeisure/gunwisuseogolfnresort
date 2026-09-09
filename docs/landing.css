@@ -696,3 +696,81 @@ ul { list-style: none; }
   position: absolute; top: calc(28px + env(safe-area-inset-top)); left: 20px;
   font-size: 12px; letter-spacing: 0.1em; color: rgba(248, 245, 238, 0.75);
 }
+
+/* ---------- v4: 히어로 핵심 혜택 두 줄 ---------- */
+.lock__lead { margin-bottom: 4px; }
+.lock__title { font-size: clamp(34px, 9.6vw, 46px); }
+.lock__keys { margin: 18px 0 14px; display: grid; gap: 10px; }
+.lock__keys li {
+  padding: 10px 14px;
+  border-left: 3px solid var(--gold-2);
+  background: rgba(8, 30, 25, 0.38);
+  border-radius: 0 10px 10px 0;
+  backdrop-filter: blur(4px);
+  text-shadow: none;
+}
+.lock__keys b { display: block; font-size: 17px; font-weight: 700; color: #fff; line-height: 1.35; }
+.lock__keys small { display: block; margin-top: 3px; font-size: 12px; line-height: 1.5; color: rgba(248, 245, 238, 0.82); }
+.lock__sub { margin-top: 0; margin-bottom: 18px; }
+
+/* ---------- 사진 한 장 ---------- */
+.photo { margin: 0 0 18px; }
+.photo img { width: 100%; aspect-ratio: 4 / 2.7; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow); }
+.photo figcaption { margin-top: 8px; font-size: 11.5px; letter-spacing: 0.04em; color: var(--ink-soft); }
+
+/* ---------- 항목 행 ---------- */
+.spec { border-top: 1px solid var(--gold-2); margin-bottom: 18px; }
+.spec li { display: flex; gap: 14px; padding: 12px 2px; border-bottom: 1px solid var(--line); font-size: 13.5px; line-height: 1.6; }
+.spec b { flex: none; width: 76px; font-size: 12.5px; color: var(--gold); font-weight: 700; padding-top: 1px; }
+.spec span { color: var(--ink); }
+.spec small { display: block; font-size: 11.5px; color: var(--ink-soft); }
+
+/* ---------- 이용 방식 선택 (다크) ---------- */
+.pick { border-top: 1px solid rgba(201, 169, 90, 0.6); }
+.pick li { display: flex; gap: 14px; padding: 16px 2px; border-bottom: 1px solid rgba(237, 241, 234, 0.16); }
+.pick__k {
+  flex: none; width: 56px; height: 30px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--gold-2); border-radius: 999px;
+  font-size: 12.5px; font-weight: 700; color: var(--gold-3);
+  margin-top: 2px;
+}
+.pick b { display: block; font-size: 15px; font-weight: 700; color: #fff; line-height: 1.45; }
+.pick p { margin-top: 5px; font-size: 13px; line-height: 1.65; color: rgba(237, 241, 234, 0.82); }
+
+/* ---------- 상품 비교표 ---------- */
+.cmp-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -24px 18px; padding: 0 24px 10px; }
+.cmp { border-collapse: separate; border-spacing: 0; min-width: 520px; width: 100%; font-size: 12.5px; line-height: 1.5; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.cmp th, .cmp td { padding: 10px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.cmp thead th { background: var(--green); color: #fff; font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+.cmp thead th.cmp__hl { background: var(--gold); }
+.cmp tbody th { width: 92px; font-size: 12px; font-weight: 700; color: var(--gold); background: #f7f3e8; position: sticky; left: 0; z-index: 1; }
+.cmp tbody td { width: 140px; }
+.cmp tbody td.cmp__hl { background: #fbf6e8; }
+.cmp tbody tr:last-child th, .cmp tbody tr:last-child td { border-bottom: 0; }
+.cmp b { font-size: 14px; color: var(--green); }
+.cmp small { display: block; margin-top: 2px; font-size: 11px; color: var(--ink-soft); }
+@media (min-width: 560px) { .cmp-wrap { margin: 0 0 18px; padding: 0; } .cmp { min-width: 0; } }
+
+/* ---------- 금액 차이 설명 ---------- */
+.diff { display: grid; gap: 12px; margin-bottom: 18px; }
+.diff__item { background: var(--paper); border: 1px solid var(--line); border-left: 3px solid var(--gold-2); border-radius: 12px; padding: 16px 16px 14px; }
+.diff__item b { display: block; font-size: 15px; font-weight: 700; color: var(--green); margin-bottom: 6px; }
+.diff__item p { font-size: 13px; line-height: 1.65; color: var(--ink); }
+
+/* ---------- 기간·반환·명의변경 ---------- */
+.terms { border-top: 1px solid var(--gold-2); margin-bottom: 12px; }
+.terms li { display: flex; gap: 14px; padding: 12px 2px; border-bottom: 1px solid var(--line); font-size: 13px; line-height: 1.6; }
+.terms b { flex: none; width: 76px; font-size: 12.5px; color: var(--gold); font-weight: 700; }
+
+/* ---------- 운영 · 계획 시설 ---------- */
+.status { margin: 6px 0 12px; display: grid; gap: 10px; }
+.status li { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; font-size: 13px; line-height: 1.6; }
+.status b { display: block; font-size: 12px; color: var(--gold); margin-bottom: 3px; }
+
+.fine + .fine { margin-top: 4px; }
+
+/* 비교표 가로 스크롤 힌트 (좁은 화면) */
+.cmp-wrap { position: relative; }
+.cmp-wrap::after { content: ""; position: absolute; top: 0; right: 0; bottom: 10px; width: 36px; pointer-events: none; background: linear-gradient(90deg, rgba(245, 242, 234, 0), var(--cream)); }
+@media (min-width: 560px) { .cmp-wrap::after { display: none; } }
