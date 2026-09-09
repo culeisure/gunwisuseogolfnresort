@@ -786,3 +786,17 @@ ul { list-style: none; }
 .lock__cta .btn { padding: 12px 10px; font-size: 14px; }
 .terms__h { font-size: 13px; font-weight: 700; color: var(--green); margin: 4px 0 6px; }
 .terms { margin-bottom: 4px; }
+
+/* ---------- 상품 비교: 블록형 ---------- */
+.cmpb { display: grid; gap: 12px; margin-bottom: 18px; }
+.cmpb__item { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px 6px; box-shadow: var(--shadow); }
+.cmpb__item h3 { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--green); padding-bottom: 10px; border-bottom: 1px solid var(--green-2); margin-bottom: 4px; }
+.cmpb__item--hl h3 { border-bottom-color: var(--gold); }
+.cmpb__item--hl { border-top: 2px solid var(--gold); }
+.cmpb__item li { display: flex; align-items: baseline; gap: 12px; padding: 9px 0; border-bottom: 1px dashed var(--line); font-size: 13.5px; line-height: 1.5; }
+.cmpb__item li:last-child { border-bottom: 0; }
+.cmpb__item li span { flex: none; width: 74px; font-size: 12px; color: var(--gold); font-weight: 600; }
+.cmpb__item li b { font-weight: 600; color: var(--ink); }
+.cmpb__item li small { font-weight: 500; color: var(--ink-soft); font-size: 12px; }
+.cmpb__price { font-family: var(--serif); font-size: 20px; color: var(--green); font-weight: 700; }
+@media (min-width: 560px) { .cmpb { grid-template-columns: repeat(3, 1fr); gap: 10px; } .cmpb__item { padding: 14px 14px 4px; } .cmpb__item li { flex-direction: column; gap: 2px; } .cmpb__item li span { width: auto; } }

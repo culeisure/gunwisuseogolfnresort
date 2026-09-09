@@ -32,7 +32,7 @@
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="../landing.css?v=6aa14b44" />
+  <link rel="stylesheet" href="../landing.css?v=6aa14c04" />
 </head>
 <body data-sp="류성현">
 
@@ -148,27 +148,44 @@
       <section class="block reveal" id="compare" aria-labelledby="cmp-title">
         <span class="sec-label">03</span>
         <h2 class="block__title" id="cmp-title">이용 구성에 따른 세 가지 선택</h2>
-        <p class="block__desc">이용 인원과 혜택을 비교해 보세요. 표는 옆으로 밀어서 보실 수 있습니다.</p>
-        <div class="cmp-wrap">
-          <table class="cmp">
-            <thead>
-              <tr>
-                <th scope="col">항목</th>
-                <th scope="col">주중 개인</th>
-                <th scope="col">주중 가족</th>
-                <th scope="col" class="cmp__hl">주중 무기명</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">분양가</th><td><b>2,150만원</b></td><td><b>3,300만원</b></td><td class="cmp__hl"><b>8,800만원</b></td></tr>
-              <tr><th scope="row">등록 인원</th><td>기명 1인</td><td>기명 2인<br /><small>부부 또는 직계가족</small></td><td class="cmp__hl">기명 1인과 무기명 4인</td></tr>
-              <tr><th scope="row">그린피</th><td>기명인 주중 6만원</td><td>기명인 2인 주중 6만원</td><td class="cmp__hl">주중 그린피 50% 할인<br /><small>무기명 4인 동일 적용</small></td></tr>
-              <tr><th scope="row">이용 횟수</th><td>내장 시 적용, 1일 1팀</td><td>내장 시 적용, 1일 1팀</td><td class="cmp__hl">주중 월 4회 이용, 1일 1팀</td></tr>
-              <tr><th scope="row">위임 라운드</th><td>불가</td><td>불가</td><td class="cmp__hl">가능, 주중 월 4회</td></tr>
-              <tr><th scope="row">이용 기간</th><td>1년 단위 연장</td><td>1년 단위 연장</td><td class="cmp__hl">10년 단위 연장</td></tr>
-              <tr><th scope="row">숙박</th><td>객실 연 2박 우대요금</td><td>객실 연 3박 우대요금</td><td class="cmp__hl">객실 연 4박 50% 할인</td></tr>
-            </tbody>
-          </table>
+        <p class="block__desc">이용 인원과 혜택을 비교해 보세요.</p>
+        <div class="cmpb">
+          <article class="cmpb__item">
+            <h3>주중 개인</h3>
+            <ul>
+              <li><span>분양가</span><b class="cmpb__price">2,150만원</b></li>
+              <li><span>등록 인원</span><b>기명 1인</b></li>
+              <li><span>그린피</span><b>기명인 주중 6만원</b></li>
+              <li><span>이용 횟수</span><b>내장 시 적용, 1일 1팀</b></li>
+              <li><span>위임 라운드</span><b>불가</b></li>
+              <li><span>이용 기간</span><b>1년 단위 연장</b></li>
+              <li><span>숙박</span><b>객실 연 2박 우대요금</b></li>
+            </ul>
+          </article>
+          <article class="cmpb__item">
+            <h3>주중 가족</h3>
+            <ul>
+              <li><span>분양가</span><b class="cmpb__price">3,300만원</b></li>
+              <li><span>등록 인원</span><b>기명 2인 <small>부부 또는 직계가족</small></b></li>
+              <li><span>그린피</span><b>기명인 2인 주중 6만원</b></li>
+              <li><span>이용 횟수</span><b>내장 시 적용, 1일 1팀</b></li>
+              <li><span>위임 라운드</span><b>불가</b></li>
+              <li><span>이용 기간</span><b>1년 단위 연장</b></li>
+              <li><span>숙박</span><b>객실 연 3박 우대요금</b></li>
+            </ul>
+          </article>
+          <article class="cmpb__item cmpb__item--hl">
+            <h3>주중 무기명</h3>
+            <ul>
+              <li><span>분양가</span><b class="cmpb__price">8,800만원</b></li>
+              <li><span>등록 인원</span><b>기명 1인과 무기명 4인</b></li>
+              <li><span>그린피</span><b>주중 그린피 50% 할인 <small>무기명 4인 동일 적용</small></b></li>
+              <li><span>이용 횟수</span><b>주중 월 4회 이용, 1일 1팀</b></li>
+              <li><span>위임 라운드</span><b>가능, 주중 월 4회</b></li>
+              <li><span>이용 기간</span><b>10년 단위 연장</b></li>
+              <li><span>숙박</span><b>객실 연 4박 50% 할인</b></li>
+            </ul>
+          </article>
         </div>
 
         <div class="diff">
@@ -291,6 +308,6 @@
   </div>
 
   <div class="progress" id="progress" aria-hidden="true"></div>
-  <script src="../landing.js?v=6aa14b44"></script>
+  <script src="../landing.js?v=6aa14c04"></script>
 </body>
 </html>
