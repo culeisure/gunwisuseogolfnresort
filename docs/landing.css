@@ -784,3 +784,5 @@ ul { list-style: none; }
 .lock__sub--key { font-weight: 700; color: #fff; margin-top: 14px; }
 .lock__cta { margin-top: 16px; }
 .lock__cta .btn { padding: 12px 10px; font-size: 14px; }
+.terms__h { font-size: 13px; font-weight: 700; color: var(--green); margin: 4px 0 6px; }
+.terms { margin-bottom: 4px; }
