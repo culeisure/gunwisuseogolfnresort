@@ -27,5 +27,5 @@ GitHub: culeisure/gunwisuseogolfnresort (public, noindex). GitHub Pages는 `docs
 
 ## 규칙
 
-- 텍스트 작업은 `claude/<작업>`, `codex/<작업>` 브랜치 워크트리(`../_wt/`)에서 하고 main 병합은 Claude가 한다.
-- PDF · 이미지 결과물은 git에 넣지 않는다 (`.gitignore`).
+- main에서 직접 작업하고 push한다 (2026-09-11 브랜치·워크트리 규칙 폐기).
+- PDF, 이미지 결과물은 git에 넣지 않는다 (`.gitignore`).
